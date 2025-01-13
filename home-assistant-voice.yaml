@@ -1526,16 +1526,15 @@ audio_dac:
 micro_wake_word:
   id: mww
   models:
+    - model: https://github.com/kahrendt/microWakeWord/releases/download/v2.1_models/alexa.json
+      id: alexa
     - model: https://github.com/kahrendt/microWakeWord/releases/download/okay_nabu_20241226.3/okay_nabu.json
       id: okay_nabu
-    - model: hey_jarvis
-      id: hey_jarvis
-    - model: hey_mycroft
-      id: hey_mycroft
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
   vad:
+    model: https://github.com/kahrendt/microWakeWord/releases/download/v2.1_models/vad.json
   microphone: comm_mic
   on_wake_word_detected:
     # If the wake word is detected when the device is muted (Possible with the software mute switch): Do nothing
